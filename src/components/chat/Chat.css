@@ -6,3 +6,15 @@
 .ant-input {
     background-color: #1790ed;
 }
+
+.ant-input:hover {
+    border: none;
+}
+
+.ant-input-affix-wrapper .ant-input:focus {
+    border: none;
+}
+
+textarea.ant-input {
+    resize: none;
+}

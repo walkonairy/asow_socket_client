@@ -1,0 +1,30 @@
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-image: url(../images/bgImages/bg.jpg);
+    z-index: -100;
+}
+
+.login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: 300px;
+    padding: 100px 40px 40px;
+    box-sizing: content-box;
+    background-color: currentColor;
+}
+
+.canvas{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

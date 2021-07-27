@@ -1,0 +1,42 @@
+.custom {
+    width: 100px;
+    height: 100px;
+    background: green;
+
+    transition: all 2s;
+    opacity: 1;
+}
+
+.custom:hover {
+    cursor: pointer;
+    transition: all 3s;
+    opacity: 0;
+    transform: scale(1.4);
+
+    transition-delay: 1s;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+
+
+.custom.out {
+    transition: all 2s;
+    opacity: 0;
+    transform: scale(1.0);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 20px auto;
+    border-radius: 100%;
+    transition-property: border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.circle:hover {
+    cursor: pointer;
+    border-radius: 0;
+}

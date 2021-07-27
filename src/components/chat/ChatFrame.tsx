@@ -58,22 +58,26 @@ export interface Props {
     history: any
 }
 
-@inject("indexStore")
-@observer
+// @inject("indexStore")
+// @observer
 class ChatFrame extends Component<Props> {
 
-    indexStore: IndexStore;
+    // indexStore: IndexStore;
 
     //是否选中待办事情列
-    @observable
-    isSelectedToDoThings: boolean;
+    // @observable
+    // isSelectedToDoThings: boolean;
 
     constructor(props: Props) {
         super(props);
 
-        this.isSelectedToDoThings = false;
+        // this.isSelectedToDoThings = false;
 
-        this.indexStore = this.props.indexStore;
+        // this.indexStore = this.props.indexStore;
+
+        this.setState({
+            isSelectedToDoThings: false
+        })
     }
 
     render() {
@@ -114,12 +118,12 @@ class ChatFrame extends Component<Props> {
                     <NavLink className={"chitchat-todo-list"}
                              to={"/"}
                              onMouseOver={() => {
-                                 this.isSelectedToDoThings = true;
+                                 this.setState({isSelectedToDoThings: true})
                              }}
                              onMouseOut={() => {
-                                 this.isSelectedToDoThings = false
+                                 this.setState({isSelectedToDoThings: false})
                              }}
-                             activeStyle={{backgroundColor: this.isSelectedToDoThings ? '#ebebec' : '#fafafa'}}
+                             // activeStyle={{backgroundColor: this.state.isSelectedToDoThings ? '#ebebec' : '#fafafa'}}
                     >
                         <div style={{display: "flex", alignItems: "center"}}>
                             <CheckCircleOutlined style={{fontSize: 18, color: '#232323'}}/>

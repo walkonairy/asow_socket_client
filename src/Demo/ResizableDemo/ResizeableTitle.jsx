@@ -3,10 +3,8 @@ import { Resizable } from "react-resizable";
 import './index.css'
 
 
-const ResizeableTitle = (props) => {
-  const { onResize, width, ...restProps } = props;
+const ResizeableTitle = ({ onResize, width, ...restProps }) => {
 
-  console.log(width)
   if (!width) {
     return <th {...restProps} />;
   }

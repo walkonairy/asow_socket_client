@@ -16,6 +16,10 @@ import MoveModalDemo from "./Demo/MoveModalDemo";
 import CallbackDemo from "./Demo/hooks/CallbackDemo";
 import AnimationDemo from "./Demo/Animation/AnimationDemo";
 import EchartsDemo1 from "./Demo/EchartsDemo/EchartsDemo1";
+import EchartsDemo2 from "./Demo/EchartsDemo/EchartsDemo2";
+import EchartsLineDemo from "./Demo/EchartsDemo/EchartsLineDemo";
+import TestHookDeps from "./Demo/TestHookDeps/TestHookDeps";
+import TableResizable from "./Demo/ResizableDemo/TableResizable";
 
 export let store = createStore(todoApp)
 
@@ -41,7 +45,11 @@ const App: React.FC = () => {
                             <Route exact path="/move/modal/demo" component={MoveModalDemo}/>
                             <Route exact path="/hook/demo" component={CallbackDemo}/>
                             <Route exact path="/animation/demo" component={AnimationDemo}/>
-                            <Route exact path="/echarts/demo" component={EchartsDemo1}/>
+                            <Route exact path="/echarts/demo1" component={EchartsDemo1}/>
+                            <Route exact path="/echarts/demo2" component={EchartsDemo2}/>
+                            <Route exact path="/echarts/demo3" component={EchartsLineDemo}/>
+                            <Route exact path="/test/hook" component={TestHookDeps}/>
+                            <Route exact path="/resizable/demo" component={TableResizable}/>
 
                         </Switch>
                     </ScrollToTop>

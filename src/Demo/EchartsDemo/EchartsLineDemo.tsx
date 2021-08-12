@@ -172,6 +172,7 @@ const EchartsLineDemo: React.FC = () => {
 
   return (
     <Chart scale={scale} padding={[30, 20, 60, 40]} autoFit height={320} data={weekData}
+            renderer={'svg'}
            interactions={['element-active']}>
       <Point position="week*sales" color="type" shape='circle'/>
       <Line shape="smooth" position="week*sales" color="type" label="sales"/>

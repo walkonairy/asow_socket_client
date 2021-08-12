@@ -28,7 +28,7 @@ const TableResizable: React.FC = () => {
     {
       title: 'Extra',
       dataIndex: 'extra',
-      // width: 400,
+      width: 400,
     },
   ]
 
@@ -37,7 +37,6 @@ const TableResizable: React.FC = () => {
   const data = Array.from({length: 30}, ((v, k) => ({id: k, name: `小${k}`, age: k})))
 
   function handleColumnWidth(text: any, index: number) {
-    console.log(columns)
     let columnWidth = columns[index].width;
     if (columnWidth && columnWidth < 100 && index !== 0) {
       columnWidth = 100;
@@ -50,6 +49,7 @@ const TableResizable: React.FC = () => {
       <Table
         components={resizeComponents}
         bordered={true}
+        scroll={{x: 1000}}
         rowKey={'id'}
         columns={resizableColumns}
         dataSource={data}
